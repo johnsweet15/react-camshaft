@@ -1,14 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { BaseProps } from '../interfaces';
 import './Button.scss';
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends BaseProps<HTMLButtonElement> {
   label?: string;
-  onAnimationStart?: () => null;
-  onDragStart?: () => null;
-  onDragEnd?: () => null;
-  onDrag?: () => null;
 }
 
 const Button = ({ label, children, style, onClick, ...props }: ButtonProps) => {
