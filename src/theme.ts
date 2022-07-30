@@ -1,3 +1,4 @@
+import THEME_CONSTANTS from './theme.module.scss';
 export interface Theme {
   components?: Components;
 }
@@ -9,14 +10,15 @@ type Components = {
 const theme: Theme = {
   components: {
     Button: {
-      backgroundColor: '#0000ff',
-      padding: '15px',
-      borderRadius: '10px',
-      fontSize: '16px',
+      background: THEME_CONSTANTS.colorSecondary,
+      padding: '10px',
+      borderRadius: '4px',
+      fontSize: THEME_CONSTANTS.fontSizeNormal,
       border: 'none',
       cursor: 'pointer',
-      fontFamily: "'Roboto', sans-serif;",
-      fontWeight: 600,
+      fontFamily: THEME_CONSTANTS.fontFamily,
+      fontWeight: 300,
+      color: 'white',
     },
   },
 };

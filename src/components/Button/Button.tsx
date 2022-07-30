@@ -2,18 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BaseProps } from '../interfaces';
 import theme from '../../theme';
-import { merge } from 'lodash';
-import './Button.scss';
+import './Button.module.scss';
 
+/** Extend all standard React button props */
 export interface ButtonProps extends BaseProps<HTMLButtonElement> {
   /** Button text, else uses children */
   label?: string;
 }
 
-const Button = ({ label, children, style, ...props }: ButtonProps) => {
+const Button = ({ label, children, style, className, ...props }: ButtonProps) => {
   return (
     <motion.button
-      className='button'
+      className={`button ${className}`}
       whileHover={{
         cursor: 'pointer',
         scale: 1.05,

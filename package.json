@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/johnsweet15"
   },
-  "version": "1.0.26",
+  "version": "1.0.29",
   "description": "",
   "scripts": {
     "test": "jest",

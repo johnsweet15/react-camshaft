@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap);
+
+$fontFamily: 'Montserrat', sans-serif !important;
+$fontSizeSmall: 14px;
+$fontSizeNormal: 16px;
+$fontSizeMedium: 18px;
+
+$blue: #5638d7;
+$darkGray: #222233;
+$magenta: #9e1263;
+$purple: #9a00c3;
+
+$colorPrimary: $purple;
+$colorSecondary: $blue;
+$colorTertiary: $magenta;
+$backgroundColorPrimary: #0d0d0d;
+$backgroundColorSecondary: #090912;
+$errorColor: #f3044d;
+
+$buttonPrimaryGradient: linear-gradient(90deg, $colorPrimary, $colorSecondary);
+$buttonSecondaryGradient: linear-gradient(90deg, $colorTertiary, $colorPrimary);
+
+:export {
+  colorPrimary: $colorPrimary;
+  colorSecondary: $colorSecondary;
+  colorTertiary: $colorTertiary;
+  backgroundColorPrimary: $backgroundColorPrimary;
+  backgroundColorSecondary: $backgroundColorSecondary;
+  errorColor: $errorColor;
+  buttonPrimaryGradient: $buttonPrimaryGradient;
+  buttonSecondaryGradient: $buttonSecondaryGradient;
+  fontFamily: $fontFamily;
+  fontSizeSmall: $fontSizeSmall;
+  fontSizeNormal: $fontSizeNormal;
+  fontSizeMedium: $fontSizeMedium;
+}

@@ -6,7 +6,7 @@ import extendTheme from '../Theme/Theme';
 extendTheme({
   components: {
     Button: {
-      backgroundColor: 'blue',
+      // backgroundColor: 'blue',
     },
   },
 });
