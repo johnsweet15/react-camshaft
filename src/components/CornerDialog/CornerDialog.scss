@@ -1,0 +1,24 @@
+@import '../../theme.module.scss';
+
+.corner-dialog-container {
+  min-width: 300px;
+  max-width: 500px;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  position: absolute;
+  border-radius: 4px;
+  margin: 20px;
+  box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 25%);
+  padding: 20px 30px;
+  overflow: hidden;
+
+  h1 {
+    margin-left: 0;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
