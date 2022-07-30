@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BaseProps } from '../interfaces';
-import { theme } from '../Theme/Theme';
+import theme from '../../theme';
+import { merge } from 'lodash';
 import './Button.scss';
 
 export interface ButtonProps extends BaseProps<HTMLButtonElement> {
@@ -9,9 +10,10 @@ export interface ButtonProps extends BaseProps<HTMLButtonElement> {
   label?: string;
 }
 
-const Button = ({ label, children, ...props }: ButtonProps) => {
+const Button = ({ label, children, style, ...props }: ButtonProps) => {
   return (
     <motion.button
+      className='button'
       whileHover={{
         cursor: 'pointer',
         scale: 1.05,
@@ -22,7 +24,7 @@ const Button = ({ label, children, ...props }: ButtonProps) => {
         transition: { duration: 0.1 },
         scale: 1,
       }}
-      style={{ ...theme?.components?.Button, ...props.style }}
+      style={{ ...theme?.components?.Button, ...style }}
       {...props}
     >
       {label || children}

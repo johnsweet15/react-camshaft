@@ -2,13 +2,11 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from './Button';
 import extendTheme from '../Theme/Theme';
-import theme from '../../theme';
 
 extendTheme({
-  ...theme,
   components: {
     Button: {
-      backgroundColor: 'red',
+      backgroundColor: 'blue',
     },
   },
 });
