@@ -1,6 +1,23 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from './Button';
+import extendTheme from '../Theme/Theme';
+import theme from '../../theme';
+
+extendTheme({
+  ...theme,
+  components: {
+    Button: {
+      backgroundColor: 'red',
+    },
+  },
+});
+
+const disable = {
+  table: {
+    disable: true,
+  },
+};
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -18,11 +35,10 @@ HelloWorld.args = {
 };
 
 HelloWorld.argTypes = {
-  onDrag: {
-    table: {
-      disable: true,
-    },
-  },
+  onAnimationStart: disable,
+  onDrag: disable,
+  onDragStart: disable,
+  onDragEnd: disable,
 };
 
 export const ClickMe = Template.bind({});
