@@ -2,11 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Button.scss';
 
-export interface ButtonProps {
-  label: string;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  label?: string;
+  onAnimationStart?: () => null;
+  onDragStart?: () => null;
+  onDragEnd?: () => null;
+  onDrag?: () => null;
 }
 
-const Button = (props: ButtonProps) => {
+const Button = ({ label, children, style, onClick, ...props }: ButtonProps) => {
   return (
     <motion.button
       whileHover={{
@@ -19,8 +24,11 @@ const Button = (props: ButtonProps) => {
         transition: { duration: 0.1 },
         scale: 1,
       }}
+      style={style}
+      onClick={onClick}
+      {...props}
     >
-      {props.label}
+      {label || children}
     </motion.button>
   );
 };
